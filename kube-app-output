@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "message": "Application is running successfully",
+  "service": "accounts",
+  "host": "localhost",
+  "port": 8080,
+  "endpoints": [
+    "/accounts",
+    "/accounts/1"
+  ]
+}
