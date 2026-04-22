@@ -1,0 +1,19 @@
+nosetests -v --with-coverage --cover-package=accounts
+
+test_create_account (test_accounts.TestAccounts) ... ok
+test_get_account (test_accounts.TestAccounts) ... ok
+test_list_accounts (test_accounts.TestAccounts) ... ok
+test_update_account (test_accounts.TestAccounts) ... ok
+test_delete_account (test_accounts.TestAccounts) ... ok
+test_cors_headers (test_accounts.TestAccounts) ... ok
+
+Name                Stmts   Miss  Cover
+---------------------------------------
+accounts.py            50      0   100%
+---------------------------------------
+TOTAL                  50      0   100%
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.045s
+
+OK
