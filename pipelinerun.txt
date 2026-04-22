@@ -1,0 +1,34 @@
+[PipelineRun] Starting pipeline run...
+[Pipeline] accounts-pipeline
+
+[Task] git-clone
+Cloning repository...
+Repository cloned successfully
+
+[Task] build-image
+Building Docker image...
+Step: build
+Successfully built image migo_pretty:latest
+
+[Task] run-tests
+Running tests...
+nosetests -v
+test_create_account ... ok
+test_get_account ... ok
+test_list_accounts ... ok
+test_update_account ... ok
+test_delete_account ... ok
+test_cors_headers ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.042s
+
+OK
+
+[Task] deploy
+Deploying to Kubernetes...
+deployment.apps/accounts configured
+service/accounts configured
+
+[PipelineRun] Completed successfully
+Status: Succeeded
