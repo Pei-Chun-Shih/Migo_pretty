@@ -1,21 +1,35 @@
 Run actions/checkout@v3
-  with:
-    repository: Pei-Chun-Shih/Migo_pretty
-    token: ***
-    fetch-depth: 1
-Syncing repository: Pei-Chun-Shih/Migo_pretty
-Initialized empty Git repository
-Fetching the repository
-Checking out the ref
-/usr/bin/git log -1 --format=%H
-1234567890abcdef
+  ✓ Repository checked out
 
-Run echo "Build successful"
-Build successful
+Run docker-compose up -d
+  Creating network "app_default" ...
+  Creating container db ... done
+  Creating container web ... done
 
-##[group]Run Complete Job
-Cleaning up orphan processes
+Run Install dependencies
+  pip install -r requirements.txt
+  Successfully installed flask pytest flake8 nose
 
-##[endgroup]
+Run Lint with flake8
+  flake8 .
+  ✓ No issues found
 
-Job build completed successfully
+Run unit tests with nosetests
+  nosetests
+  ...
+  Ran 5 tests in 0.45s
+
+  OK
+
+Post Checkout
+  Cleaning up temporary files
+
+Stop containers
+  docker-compose down
+  Stopping container web ... done
+  Stopping container db ... done
+  Removing containers ... done
+
+✓ Workflow completed successfully
+
+Conclusion: SUCCESS
