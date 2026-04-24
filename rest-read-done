@@ -1,0 +1,10 @@
+curl.exe -i --noproxy "*" -X GET http://127.0.0.1:5000/accounts/1
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Alice",
+  "email": "alice@example.com"
+}
