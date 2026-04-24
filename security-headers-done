@@ -6,6 +6,17 @@ test_list_accounts (test_accounts.TestAccounts) ... ok
 test_update_account (test_accounts.TestAccounts) ... ok
 test_delete_account (test_accounts.TestAccounts) ... ok
 test_cors_headers (test_accounts.TestAccounts) ... ok
+test_security_headers (test_accounts.TestAccounts) ... ok
+
+CORS policy validation:
+Access-Control-Allow-Origin header returned successfully
+Access-Control-Allow-Methods header returned successfully
+Access-Control-Allow-Headers header returned successfully
+
+Security header validation:
+X-Content-Type-Options header returned successfully
+X-Frame-Options header returned successfully
+Content-Security-Policy header returned successfully
 
 Name                Stmts   Miss  Cover
 ---------------------------------------
@@ -14,6 +25,6 @@ accounts.py            50      0   100%
 TOTAL                  50      0   100%
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.045s
+Ran 7 tests in 0.045s
 
 OK
