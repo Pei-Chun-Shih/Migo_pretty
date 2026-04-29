@@ -1,21 +1,21 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: cleanup-task
+  name: cleanup
 spec:
   steps:
-    - name: cleanup
+    - name: cleanup-step
       image: alpine
       script: |
         #!/bin/sh
-        echo "Cleaning up workspace..."
+        echo "Cleaning workspace..."
         rm -rf /workspace/*
 
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: test-task
+  name: test
 spec:
   steps:
     - name: run-tests
